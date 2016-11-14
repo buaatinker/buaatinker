@@ -19,7 +19,13 @@ public class HelloWorld extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException
     {
-        System.out.println("deGet method");
+        doPost(req, resp);
+    }
+    
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException
+    {
         PrintWriter pw = resp.getWriter();
 
         pw.println("Hello World");
